@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrypGo - Crypto On The Go</title>
+    
+    <!-- <meta http-equiv="refresh" content="3"> -->
+
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="kraft Byte Solution" style="width: 150px; height: 120px; margin-top: -20px;">
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="navbar-nav mx-auto d-none d-lg-flex">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="services.html">Services</a>
+                    <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    <a class="nav-link" href="teams.html">Teams</a>
+                    <a class="nav-link" href="blogs.html">Blogs</a>
+                    <a class="nav-link" href="about.html">About KBS</a>
+                </div>
+                
+                <!-- Contact Button -->
+                <div class="d-none d-lg-flex align-items-center gap-3">
+                    <button class="btn btn-primary">Contact Us</button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="navbar-toggler d-lg-none" type="button" onclick="toggleMobileMenu()">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-header">
+                    <img src="images/logo.png" alt="kraft Byte Solutions" style="width: 150px; height: 120px;">
+                    <button class="btn-close" onclick="toggleMobileMenu()">
+                        <!-- <img src="images/closed.svg" alt="Close" class="close-icon"> -->
+                        <i class="fa-solid fa-xmark white-cross"></i>
+                    </button>
+                </div>
+                <div class="mobile-menu-content">
+                    <a class="mobile-nav-link" href="index.html" onclick="toggleMobileMenu()">Home</a>
+                    <a class="mobile-nav-link" href="services.html" onclick="toggleMobileMenu()">Services</a>
+                    <a class="mobile-nav-link" href="portfolio.html" onclick="toggleMobileMenu()">Portfolio</a>
+                    <a class="mobile-nav-link" href="teams.html" onclick="toggleMobileMenu()">Teams</a>
+                    <a class="mobile-nav-link" href="blogs.html" onclick="toggleMobileMenu()">Blogs</a>
+                    <a class="mobile-nav-link" href="about.html" onclick="toggleMobileMenu()">About KBS</a>
+                    <div class="mobile-auth-buttons">
+                        <button class="btn btn-primary w-100" onclick="openContactModal(); toggleMobileMenu()">Contact</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-12">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <span class="hero-badge-text">Fastest Services. let's <span class="text-primary">Go</span></span>
+                        </div>
+                        <h1 class="hero-title">
+                            Building Smarter <span class="text-primary">Software</span>  for a <span class="text-primary">Digital World</span>!
+                        </h1>
+                        <div class="hero-buttons">
+                            <a href="contact.html"><button class="btn btn-primary btn-lg">Join Now</button> </a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 d-none d-lg-block">
+                    <div class="hero-image">
+                        <img src="images/banner-image.png" alt="Banner" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card Slider -->
+        <div class="card-slider">
+            <div class="container-fluid">
+                <div class="slider-container">
+                    <div class="slider-track">
+                        <!-- Card 1 -->
+                        <div class="slider-card">
+                            <div class="card-icon"><i class="fas fa-code"></i></div>
+                            <div class="card-content">
+                                <h4>Custom Development</h4>
+                                <p class="card-projects">120 Projects Done</p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="slider-card">
+                            <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="card-content">
+                                <h4>Mobile App Development</h4>
+                                <p class="card-projects">85 Projects Done</p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="slider-card">
+                            <div class="card-icon"><i class="fas fa-server"></i></div>
+                            <div class="card-content">
+                                <h4>Backend Solutions</h4>
+                                <p class="card-projects">64 Projects Done</p>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="slider-card">
+                            <div class="card-icon"><i class="fas fa-cloud"></i></div>
+                            <div class="card-content">
+                                <h4>Cloud Integration</h4>
+                                <p class="card-projects">47 Projects Done</p>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="slider-card">
+                            <div class="card-icon"><i class="fas fa-robot"></i></div>
+                            <div class="card-content">
+                                <h4>AI & Automation</h4>
+                                <p class="card-projects">33 Projects Done</p>
+                            </div>
+                        </div>
+                        <!-- Card 6 (New) -->
+                        <div class="slider-card">
+                            <div class="card-icon"><i class="fas fa-database"></i></div>
+                            <div class="card-content">
+                                <h4>Data Solutions</h4>
+                                <p class="card-projects">29 Projects Done</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        
+        <!-- Background Gradient -->
+        <!-- <div class="hero-bg-gradient"></div> -->
+    </section>
+
+    <!-- Work Section -->
+    <section class="work-section" id="work">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 col-12">
+                    <div class="work-content">
+                        <p class="section-subtitle">Choose <spacn class="text-primary">us</span></p>
+                        <h2 class="section-title">Successfully Complete & Launch Your Project.</h2>
+                        <div class="services-grid">
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fas fa-code" style="font-size: 40px; color: #2a8757;"></i>
+                                </div>
+                                <p class="service-text">Web Development</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fas fa-mobile-alt" style="font-size: 40px; color: #2a8757;"></i>
+                                </div>
+                                <p class="service-text">Mobile App Development</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fas fa-cloud" style="font-size: 40px; color: #2a8757;"></i>
+                                </div>
+                                <p class="service-text">Cloud Solutions</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fas fa-shield-alt" style="font-size: 40px; color: #2a8757;"></i>
+                                </div>
+                                <p class="service-text">Cybersecurity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-12">
+                    <div class="work-image">
+                        <img src="images/work-with-us.png" alt="Work with us" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section" id="timeline">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-header text-center">
+                        <p class="section-subtitle">Development <span class="text-primary">Timeline</span></p>
+                        <h2 class="section-title">We can enter at any point or help you all the way through the development cycle.</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-number">01</div>
+                    <div class="timeline-content">
+                        <h3>Discovery</h3>
+                        <p>We analyze your requirements and create a detailed project plan.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">02</div>
+                    <div class="timeline-content">
+                        <h3>Design</h3>
+                        <p>Our team creates wireframes and designs for your Problem's solution.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">03</div>
+                    <div class="timeline-content">
+                        <h3>Development</h3>
+                        <p>We build your Project application using cutting-edge technology.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">04</div>
+                    <div class="timeline-content">
+                        <h3>Launch</h3>
+                        <p>We deploy and launch your Developed project successfully.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Section -->
+    <section class="platform-section" id="platform">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-12">
+                    <div class="platform-image">
+                        <img src="images/img-portfolio2.png" alt="Platform" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="platform-content">
+                        <p class="section-subtitle">Our <span class="text-primary">Platform</span></p>
+                        <h2 class="section-title">Secure and reliable digital service provider</h2>
+                        <p class="platform-description">
+                            Empower your business with our cutting-edge software solutions.
+We design, develop, and deliver technology that drives growth and innovation.
+                        </p>
+                        <div class="platform-features">
+                            <div class="feature-item">
+                                <img src="images/icons/icon-star.svg" alt="Secure" class="feature-icon">
+                                <span>Best Service</span>
+                            </div>
+                            <div class="feature-item">
+                                <img src="images/icons/icon-star.svg" alt="Fast" class="feature-icon">
+                                <span>Fast Service</span>
+                            </div>
+                            <div class="feature-item">
+                                <img src="images/icons/icon-star.svg" alt="Analytics" class="feature-icon">
+                                <span>Privacy Garanteed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-header text-center">
+                        <p class="section-subtitle">Our <span class="text-primary">Portfolio</span></p>
+                        <h2 class="section-title">Transforming Ideas into Powerful Software Solutions</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="images/webdevelopment.PNG" alt="Project 1" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h4>Web Development</h4>
+                        <p>Responsive and scalable websites for your business</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/app-development.png" alt="Project 2" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h4>Mobile App Development</h4>
+                        <p>Cross-platform apps with seamless performance</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/cloud-development.jpg" alt="Project 3" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h4>Cloud Solutions</h4>
+                        <p>Secure, scalable, and high-performance cloud services</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/ai-development.png" alt="Project 4" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h4>AI & ML Development</h4>
+                        <p>Intelligent systems to automate and optimize processes</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/ecommerce.png" alt="E-commerce Solutions" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h4>E-commerce Solutions</h4>
+                        <p>Custom online store development with secure payment integration</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/warehouse.png" alt="Warehouse Management Systems" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h4>Warehouse Management Systems</h4>
+                        <p>Smart inventory tracking and logistics optimization</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="footer-brand">
+                        <img src="images/logo/logo.svg" alt="CrypGo Logo" height="40">
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <p class="copyright">2025 Copyright | CrypGo</p>
+                        <p class="distributed">Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h4>Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="teams.html">Teams</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="about.html">About KBS</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h4>Information</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <h4>Subscribe</h4>
+                    <p>Subscribe to get the latest news from us</p>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter Email" class="form-control">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    
+    <!-- Sign In Modal -->
+    <div class="modal fade" id="signInModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buy Crypto Modal -->
+    <div class="modal fade" id="buyModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Buy Crypto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Select Cryptocurrency</label>
+                            <select class="form-select">
+                                <option>Bitcoin (BTC)</option>
+                                <option>Ethereum (ETH)</option>
+                                <option>Cardano (ADA)</option>
+                                <option>Solana (SOL)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Amount (USD)</label>
+                            <input type="number" class="form-control" placeholder="Enter amount">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Buy Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sell Crypto Modal -->
+    <div class="modal fade" id="sellModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sell Crypto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Select Cryptocurrency</label>
+                            <select class="form-select">
+                                <option>Bitcoin (BTC)</option>
+                                <option>Ethereum (ETH)</option>
+                                <option>Cardano (ADA)</option>
+                                <option>Solana (SOL)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Amount</label>
+                            <input type="number" class="form-control" placeholder="Enter amount">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sell Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Contact Us</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Subject</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="4" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <canvas id="neuronCanvas"></canvas>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="background-animantion.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+
+    <script>
+        // Auto-scroll horizontally in an infinite loop
+        const container = document.querySelector('.slider-container');
+        let scrollSpeed = 1; // pixels per frame
+    
+        function autoScroll() {
+            container.scrollLeft += scrollSpeed;
+            if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+                container.scrollLeft = 0; // loop back to start
+            }
+            requestAnimationFrame(autoScroll);
+        }
+    
+        autoScroll();
+    </script>
+</body>
+</html> 
