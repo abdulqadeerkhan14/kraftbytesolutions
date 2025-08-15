@@ -210,6 +210,40 @@ img:not([src]) {
 .navbar-toggler-icon::after {
     top: 8px;
 }
+/* Dropdown hover behavior */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* aligns dropdown with navbar */
+}
+
+/* Dropdown menu theme */
+.navbar,
+.navbar-nav {
+    overflow: visible !important;
+}
+/* Fix dropdown positioning and stacking */
+.dropdown-menu {
+    position: absolute !important;
+    z-index: 9999 !important;
+}
+header, .container, .row, .navbar-container {
+    overflow: visible !important;
+}
+.nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+/* Dropdown links */
+.dropdown-item {
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #2a8757; /* Theme green on hover */
+    color: white;
+}
 
 /* Mobile Menu */
 .mobile-menu {
@@ -275,7 +309,8 @@ img:not([src]) {
 
 /* Hero Section */
 .hero-section {
-    padding: 140px 0 112px;
+    /* padding-top: 140px; */
+    padding: 70px 0 112px;
     position: relative;
     overflow: hidden;
     max-width: 100%;
@@ -691,8 +726,9 @@ img:not([src]) {
 
 .feature-item i,
 .feature-icon {
-    width: 40px;
-    height: 40px;
+    width: 10px;
+    height: 10px;
+    margin: 10px;
     background-color: var(--primary);
     border-radius: 50%;
     display: flex;
@@ -704,7 +740,7 @@ img:not([src]) {
 
 .feature-icon {
     object-fit: contain;
-    padding: 8px;
+    /* padding: 8px; */
     max-width: 100%;
     max-height: 100%;
 }
@@ -943,7 +979,7 @@ img:not([src]) {
 .copyright,
 .distributed {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
     margin: 20px 0 0;
 }
